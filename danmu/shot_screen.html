@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<!-- 那啥，我BB两句，这段代码可以实现发射弹幕，切换清屏，但是有个BUG，发射弹幕时弹幕字体会向下移动，我也搞不懂，真的，哪个大哥知道为什么一定要联系我，虽然不搅基，但是还是会很感谢你的 邮箱：643898155@qq.com -->
+	<meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+	<meta charset="UTF-8">
+	<title>弹幕</title>
+
+	<!-- 按钮键使用bootstrap -->
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<!-- css定义 -->
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			height: 500px;
+			background: #fff5e8;
+			border: 2px solid orange;
+			border-radius: 10px;
+			position: relative;
+			overflow: hidden;
+            font-size: 20px;
+		}
+		.menu-bar{
+			width: 1000px;
+			margin:10px auto;
+			text-align: center;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<!-- 创建容器 -->
+	<div class="container"></div>
+	<!-- 创建发射清空弹幕的容器 -->
+	<div class="menu-bar">
+		<!-- 输入框 -->
+		<input type="text" placeholder="射啥？" id="msg">
+		<!-- 发射按钮 -->
+		<button class="btn btn-info" id="submitMsg"><span>发射弹幕</span></button>
+		<!-- 切换按钮 -->
+		<button class="btn btn-warning" id="clearMsg"><span>切换弹幕</span></button>
+	</div>
+
+
+
+
+
+
+
+
+
+	<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+	<script type="text/javascript">
+		//使用jQuery
+		$(document).ready(function(){
+
+			$("#submitMsg").click(function(){
+				//输入的value
+				var msgTxt=$("#msg").val();
+
+				//颜色变量
+				var colorTxt=getReandomColor();
+
+				//css top变量
+				var topPos=randomNum();
+
+				//创建弹幕，使用动画制作弹幕，首先要先定位为relative,我们从右面开始进行弹幕
+				var newTxt='<p id="danmu" style="top:'+topPos+';position:relative;text-align:right;color:'+colorTxt+'">' + msgTxt + '</p>';
+
+				//将弹幕插入class为container的容器中
+				$(".container").prepend(newTxt);
+
+				//这部分我不太理解，照理来说，这段WIDTH可有可无，鸡肋到蛋疼，但是没有它弹幕就是动不了，谁看到这段代码能看出问题，麻烦一定要告诉我为什么，这是我邮箱：643898155@qq.com 万分感谢！
+				var addDanmuWidth=$(".container").find("p").width();
+				$(".container p").animate({
+
+					left:'-'+addDanmuWidth+1000+"px"
+
+				},3000000,function(){
+
+					$(this).hide();
+
+				});
+				//清空输入框文字
+				$("#msg").val(" ");
+
+			});
+
+			// 字体随机颜色，我也看不懂这个。。。。
+			 function getReandomColor() {  
+                return '#' + (function(h) {  
+                    return new Array(7 - h.length).join("0") + h  
+                })((Math.random() * 0x1000000 << 0).toString(16))  
+            };
+
+            // 设置随机行数，之前大神的代码复杂，不适用，我改写了一遍
+            function randomNum() {
+
+            	//ceil取整数小于500的整数，toString 转换为字符串
+				var num=Math.ceil(Math.random()*500).toString();
+
+
+				return num+'px';
+		
+			};
+
+			//切换清屏
+			$("#clearMsg").click(function(){
+
+				$("p").toggle();
+			});
+
+		});
+
+	</script>
+<!-- 你好啊 -->
+</body>
+</html>
