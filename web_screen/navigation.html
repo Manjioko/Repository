@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="awesome/css/font-awesome.min.css">
+	
+
+
+	<style type="text/css">
+
+	body{
+
+		position: relative;
+		/*padding-top: 100px;*/
+		background-color: #ffbd6d;
+		
+
+	}
+ 
+.navbar-custom {
+    
+    background-color: #bc6367;
+    color:white;
+    box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.1);
+    margin: 0px 0px;
+    padding: 20px;
+    /*border-radius: 10px;*/
+
+}
+
+#only:hover{
+	color:pink;
+	font-size: 21px;
+	background: white;
+
+	box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+
+}
+.nav>li a{
+	
+
+	margin: 5px 10px;
+}
+.dropdown>ul>li a{ 
+	box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+	background: #e57b7f;
+	color: white;
+	font-size: 15px;
+	padding: 0px 10px;
+	margin: 10px 10px;
+}
+.intro-text{
+
+	margin:0px 100px;
+	background: #f4b2a6;
+	border-radius: 0px;
+	color: white;
+	font-size: 20px;
+	padding: 100px;
+
+}
+.navbar-brand img{
+	float: left;
+	width: 100px;
+	height: 80px;
+	margin: -28px -10px 0px;
+}
+.intro-text > p img{
+	float: right;
+	width: 250px;
+	height: 180px;
+	margin: 0px 30px 0px;
+	box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 30px;
+}
+.bootstrap{
+
+    background: lightgray;
+    margin: -20px 100px;
+    color: black"
+
+}
+.bootstrapPicture{
+
+	border:1px solid white;
+	border-radius: 4px;
+	padding: 5px;
+	width: 450px;
+	height: 350px;
+	margin: 10px 55px 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/*display: inline-block;*/
+
+
+}
+.email-block{
+
+	padding: 100px 10px;
+
+	background: gray;
+    margin: 20px 100px;
+    color: black"
+}
+.contact{
+
+	background: orange;
+	margin: -20px 100px;
+	color: white;
+	text-align: center;
+	/*border: 1px solid white;*/
+	/*box-shadow:0px 2px 2px 1px rgba(0, 0, 0, 0.1);*/
+}
+.button{
+  color:#fff;
+  border:solid 2px #fff;
+  border-radius:50%;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  text-align:center;
+  font-size:20px;
+  line-height:48px;
+  -webkit-transition:all .3s ease-in-out;
+  transition:all .3s ease-in-out;
+}
+.button:hover{border:solid 2px #fff;color:black;background:#fff;
+}
+
+	</style>
+
+
+</head>
+<body >
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="scrollspy-listener">
+	<!-- start1导航框的商标，小屏幕显示的设备下拉框设计，还有阅读器设计 -->
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand"><img src="picture/logo.png" alt="font-console"></a>
+			<!-- start1 end -->
+		</div>
+
+		<!-- start2 这里设计nav 列表，表格 -->
+		<div class="collapse navbar-collapse bs-js-navbar-scrollspy " id="my-navbar">
+			<ul class="nav navbar-nav">
+				<li><a href="#bootstrap" id="only">Bootstrap</a></li>
+				<li><a href="#jquery" id="only">jQuery</a></li>
+				<!-- <li><a href="#javascript">Javascript</a></li> -->
+				<li class="dropdown">
+					<a href="#javascript" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="only2">Javascript<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li class="divider" role="separator"></li>
+						<li><a href="#">Action1</a></li>
+						<li class="divider" role="separator"></li>
+						<li><a href="#">Action2</a></li>
+						<!-- <li class="divider" role="separator"></li>
+						<li><a href="#">separated link</a></li>
+						<li class="divider" role="separator"></li>
+						<li><a href="#">separated link too</a></li> -->
+					</ul>
+				</li>
+			</ul>
+			<!-- 这是个搜索框，包含在<div class="collapse navbar-collapse" id="my-navbar">内-->
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="搜索">
+				</div>
+				<button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+<div class="intro-text">
+	
+	<h3 style="color: white;padding: 12px 0px 20px;padding-top: 120px" >前端简介</h3>
+	<p> <img src="picture/logo2.png" alt="front-end-skills">&nbsp&nbsp&nbsp&nbsp在软件架构和程序设计领域，前端是软件系统中直接和用户交互的部分，而后端控制着软件的输出。将软件分为前端和后端是一种将软件不同功能的部分相互分离的抽象。大部分软件都概念性地分成了前端和后端，但大多数情况下，软件的后端经常是隐藏着而不被用户看到。但是，有些软件仅仅是另一个已经存在的软件的前端，就像一个图形用户界面 (GUI) 构建在字符界面之上。这些前端在Unix GUI中非常普遍，很多程序被分成了很多小项目，使它们能够互不依赖但又能协同在一起工作。（见桌面环境）可以将与计算机交互过程分为前端和后端</p>
+	
+	
+</div>
+	<div class="bootstrap" id="content">
+		<h3 style="color: white;padding: 12px 0px 20px;text-align: center; font-size: 40px" id="bootstrap">Bootsrap</h3>
+		<img src="picture/bootstrap0.jpg" alt="phone" class="bootstrapPicture">
+		<img src="picture/bootstrap1.png" alt="bootstrap logo" class="bootstrapPicture">
+		<img src="picture/bootstrap2.png" alt="bootstrap logo" class="bootstrapPicture">
+		<img src="picture/bootstrap3.png" alt="pwa" class="bootstrapPicture">
+		<img src="picture/picture.jpg" alt="double phone" class="bootstrapPicture">
+		<img src="picture/images.png" alt="all font-console learn" class="bootstrapPicture">
+		<hr style="border: 1px solid white">
+		<div>
+			<h3 style="color: white;padding: 12px 0px 20px;text-align: center; font-size: 40px" id="jquery">jQuery</h3>
+
+			<img src="picture/jquery0.jpg" alt="" class="bootstrapPicture">
+			<img src="picture/jquery1.png" alt="" class="bootstrapPicture">
+			<img src="picture/jquery2.png" alt="" class="bootstrapPicture">
+			<img src="picture/jquery3.png" alt="" class="bootstrapPicture">
+			<img src="picture/jquery4.png" alt="" class="bootstrapPicture">
+			<img src="picture/jquery5.jpg" alt="" class="bootstrapPicture">
+
+		</div>
+		</div>
+		<div class="email-block">
+		<h3 style="color: white;font-size: 60px;text-align: center; padding-bottom: 10px;margin:30px 0px;">Message</h3>
+
+			<form class="form-horizontal">
+  		<div class="form-group">
+    		<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    		<div class="col-sm-10">
+      		<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+    		</div>
+  		</div>
+  		<div class="form-group">
+    		<label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    		<div class="col-sm-10">
+      		<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+    		</div>
+  		</div>
+  		<div class="form-group">
+    		<div class="col-sm-offset-2 col-sm-10">
+      			<div class="checkbox">
+        		<label>
+          		<input type="checkbox"> Remember me
+        		</label>
+      		</div>
+    		</div>
+  		</div>
+  		<div class="form-group">
+    		<div class="col-sm-offset-2 col-sm-10">
+      		<button type="submit" class="btn btn-default">Sign in</button>
+    		</div>
+  		</div>
+		</form>
+
+			
+			<!-- <a class="button social" href="https://github.com/hallaathrad"><i class="fa fa-fw fa-tencent-weibo"></i></a> -->
+		</div>
+
+		<div class="contact">
+			<h1>Contact Me</h1>
+			<div style="text-align: right;padding: 2px 20px;">
+				<h3 style="margin: -10px 50px 10px">Our web</h3>
+				<a class="button social" href="http://t.qq.com/" target="_blank"><i class="fa fa-fw fa-tencent-weibo"></i></a> 
+				<a class="button social" href="https://weibo.com/" target="_blank"><i class="fa fa-fw fa-weibo"></i></a> 
+				<a class="button social" href="https://weixin.qq.com/" target="_blank"><i class="fa fa-fw fa-wechat"></i></a>
+			</div>
+ 
+		</div>
+
+
+
+
+
+
+	<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="http://apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('body').scrollspy({ target: '#my-navbar'});
+		
+			$("#only2").focus(function(){
+
+				$(this).css({"color":"pink","background": "white","box-shadow":"0px 2px 2px 1px rgba(0, 0, 0, 0.2)","border-radius": "5px","font-size": "21px"});
+			});
+			$("#only2").blur(function(){
+
+				$(this).css({"color":"","background": "","box-shadow":"","border-radius": "","font-size":""});
+			});
+			});
+
+	</script>
+</body>
+</html>
